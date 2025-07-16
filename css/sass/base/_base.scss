@@ -295,8 +295,8 @@ html[dir="ltr"] .progress-bar {
 /*                                 arrow-top                           */
 .arrow-top {
   position: fixed;
-  bottom: 120px;
-  inset-inline-start: 25px;
+  bottom: 20px;
+  inset-inline-start: 20px;
   display: none;
   padding: 0;
   z-index: 10;
@@ -316,7 +316,7 @@ html[dir="ltr"] .progress-bar {
   transition: all 0.3s ease-in-out;
 }
 .arrow-top:hover {
-  background-color: $main;
+  background-color: $hover;
   color: $white;
 }
 .fixed-what {
@@ -357,10 +357,10 @@ html[dir="ltr"] .progress-bar {
   box-shadow: inset 0 0 0 2em var(--main-hover);
 }
 @media (max-width: 767px) {
-  .arrow-top {
-    bottom: 70px;
-    inset-inline-start: 15px;
-  }
+  // .arrow-top {
+  //   bottom: 70px;
+  //   inset-inline-start: 15px;
+  // }
   .fixed-what {
     position: fixed;
     bottom: 10px;

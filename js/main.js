@@ -80,4 +80,26 @@ $(document).ready(function () {
       ? $(".arrow-top").fadeIn(300)
       : $(".arrow-top").fadeOut(300);
   });
+  $("#fixedNavbar ul li a[href^='#'], ul.footer-nav li a[href^='#']").on(
+    "click",
+    function (e) {
+      e.preventDefault();
+      var hash = this.hash;
+      $("html, body").animate(
+        {
+          scrollTop: $(this.hash).offset().top - 100,
+        },
+        500,
+        function () {
+          window.location.hash = hash;
+        }
+      );
+      if ($(window).width() <= 767) {
+        $(".navbar").fadeOut(300);
+        $(".overlay").fadeOut(300);
+        $(".nav").removeClass("active");
+        $("body").removeClass("overflow");
+      }
+    }
+  );
 });
